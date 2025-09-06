@@ -3,20 +3,11 @@ import { Routes, Route } from 'react-router'
 import HomePage from './pages/HomePage.jsx'
 import NoteDetailPage from './pages/NoteDetailPage.jsx'
 import CreatePage from './pages/CreatePage.jsx'
-import toast from 'react-hot-toast'
 
 const App = () => {
   return (
-    <div>
-      <button className="btn btn-neutral">Neutral</button>
-      <button className="btn btn-primary">Primary</button>
-      <button className="btn btn-secondary">Secondary</button>
-      <button className="btn btn-accent">Accent</button>
-      <button className="btn btn-info">Info</button>
-      <button className="btn btn-success">Success</button>
-      <button className="btn btn-warning">Warning</button>
-      <button className="btn btn-error">Error</button>
-      <button onClick={()=>{toast.success("Yeah")}} className="btn btn-primary">Click Me</button>
+      <div className="relative h-full w-full">
+      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#ff78c440_100%)]" />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/note/:id" element={<NoteDetailPage />} />
